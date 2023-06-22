@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .content {
+            width: 410px;
+            height: 420px;
+            position: relative;
+            /* background-color: rgb(215, 23, 23); */
+            margin: auto;
+            margin-top: 20%;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            margin: 20px auto;
+            transform: translate(-50%, -55%);
+            background: rgba(113, 183, 206, 0.648);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            border-radius: 10px;
+        }
+
+        .login-box p:first-child {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #9f3838e1;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .login-box .user-box {
+            position: relative;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #c35e5e;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #f2e8e8;
+            outline: none;
+            background: transparent;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #5563e5;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .login-box .user-box input:focus~label,
+        .login-box .user-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #50769e;
+            font-size: 12px;
+        }
+
+        .login-box form a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #81abcf;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 3px
+        }
+
+        .login-box a:hover {
+            background: #fff;
+            color: #ff8282;
+            border-radius: 5px;
+        }
+
+        .login-box a span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #fff);
+            animation: btn-anim1 1.5s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #fff);
+            animation: btn-anim2 1.5s linear infinite;
+            animation-delay: .375s
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #fff);
+            animation: btn-anim3 1.5s linear infinite;
+            animation-delay: .75s
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #fff);
+            animation: btn-anim4 1.5s linear infinite;
+            animation-delay: 1.125s
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        .login-box p:last-child {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .login-box a.a2 {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .login-box a.a2:hover {
+            background: transparent;
+            color: #aaa;
+            border-radius: 5px;
+        }
+
+        .login-box:hover {
+            /* transform: scale(0.98); */
+            /* border-radius: 20px; */
+            width: 100.05%;
+            height: 100.05%;
+            transition: 0.5s, 0.5s;
+        }
+
+        .content:hover {
+            box-shadow: 0px 0px 30px 1px rgba(52, 164, 225, 0.878);
+        }
+
+        .header {
+            height: 30%;
+            width: 100%;
+            position: absolute;
+            /* background-color: #5563e582; */
+            margin-top: -15%;
+        }
+
+        .text-magic {
+            position: absolute;
+            top: 30%;
+            left: 61%;
+            transform: translate(-50%, -50%) scale(3);
+            width: 20%;
+            font-size: 20px;
+            font-family: Raleway, Verdana, Arial;
+            color: transparent;
+        }
+
+        /* .white {
+            position: relative;
+            left: -10px;
+            width: 200%;
+            height: 1px;
+            background: #45313150;
+            z-index: 4;
+            animation: whiteMove 10s ease-out infinite;
+        } */
+
+        .text-magic::before {
+            content: attr(data-word);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 36px;
+            color: rgba(233, 58, 58, 0.681);
+            overflow: hidden;
+            z-index: 2;
+            filter: contrast(200%);
+            text-shadow: 1px 0 0 rgba(222, 93, 93, 0.637);
+            animation: move 1.5s infinite;
+        }
+
+        .text-magic::after {
+            content: attr(data-word);
+            position: absolute;
+            top: 0;
+            left: -1px;
+            height: 36px;
+            color: rgba(255, 255, 255, 0.8);
+            overflow: hidden;
+            z-index: 3;
+            color: rgb(38, 192, 192);
+            filter: contrast(200%);
+            text-shadow: -1px 0 0 rgb(34, 177, 177);
+            mix-blend-mode: lighten;
+            animation: move 1.1s infinite 0.2s;
+        }
+
+        @keyframes whiteMove {
+            9% {
+                top: 38px;
+            }
+
+            14% {
+                top: 8px;
+            }
+
+            18% {
+                top: 42px;
+            }
+
+            22% {
+                top: 1px;
+            }
+
+            32% {
+                top: 32px;
+            }
+
+            34% {
+                top: 12px;
+            }
+
+            40% {
+                top: 26px;
+            }
+
+            43% {
+                top: 7px;
+            }
+
+            99% {
+                top: 30px;
+            }
+        }
+
+        @keyframes move {
+            10% {
+                top: -0.4px;
+                left: -1.1px;
+            }
+
+            20% {
+                top: 0.4px;
+                left: -0.2px;
+            }
+
+            30% {
+                left: .5px;
+            }
+
+            40% {
+                top: -0.3px;
+                left: -0.7px;
+            }
+
+            50% {
+                left: 0.2px;
+            }
+
+            60% {
+                top: 1.8px;
+                left: -1.2px;
+            }
+
+            70% {
+                top: -1px;
+                left: 0.1px;
+            }
+
+            80% {
+                top: -0.4px;
+                left: -0.9px;
+            }
+
+            90% {
+                left: 1.2px;
+            }
+
+            100% {
+                left: -1.2px;
+            }
+        }
+    </style>
+    <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        // var name=document.getElementById("myinput").value;
+        $(document).ready(function () {
+            // var name = document.getElementById("myinput").value;
+            var i = 0;
+            if (i = 0) {
+                $("#buttoner").hover(function () {
+                    alert("welcome" + name + ",很抱歉这个网页正在开发，也很感谢你来访问我的网页，预计在8月完工，and,接下来click Ending进入网页吧");
+                    i++;
+                })
+            }
+            else{
+
+            }
+
+        })
+    </script> -->
+</head>
+
+<body>
+    <video autoplay muted loop src="./11.mp4">
+
+    </video>
+    <div class="header">
+        <span></span>
+        <div class="text-magic" data-word="NN's Landing page">
+            <div class="white"></div>
+        </div>
+    </div>
+    <div class="content">
+        <!-- <a href="./myhtml2.html">
+            <h1>555555</h1>
+        </a> -->
+        <div class="login-box">
+            <p>Login</p>
+            <form>
+                <div class="user-box">
+                    <input required="" name="" type="name" id="myinput">
+                    <label>Name</label>
+                </div>
+                <div class="user-box">
+                    <input required="" name="" type="password">
+                    <label>Password</label>
+                </div>
+                <a href="./myhtml2.html" type="button" value="button" id="button" tip="很抱歉这个网页正在开发，也很感谢你来访问我的网页，预计在8月完工，and,接下来click Entering进入网页吧">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Entering
+                </a>
+                <script type="text/javascript">
+                    document.body.onload = function(){
+                        var objs = document.getElementsByTagName("*");
+                        for(var i = 0 ;i < objs.length ; i ++){
+                            var obj = objs[i];
+                            if(obj.getAttribute("tip")){
+                                obj.onmousemove = Tips.showTips;
+                            }
+                        }
+                    }
+                    var Tips = {
+                        mousePos : function(e) {
+                            var x, y;
+                            var e = e || window.event;
+                            return {
+                                x : e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft,
+                                y : e.clientY + document.body.scrollTop + document.documentElement.scrollTop
+                            };
+                        },			
+                        showTips : function(event){
+                            event = event || window.event;
+                            var target = event.srcElement || event.target;
+                            var tipsDiv = document.getElementById("tipsDiv");
+                            if(typeof tipsDiv == undefined || tipsDiv == null){
+                                tipsDiv = document.createElement("div");
+                                tipsDiv.id = "tipsDiv";
+                                document.body.appendChild(tipsDiv);
+                            }
+                            var mouse = Tips.mousePos(event);
+                            tipsDiv.style.position = "absolute";
+                            tipsDiv.style.width = "250px";
+                            tipsDiv.style.height = "100px";
+                            tipsDiv.style.backgroundColor = "gray";
+                            tipsDiv.style.color = "black";
+                            tipsDiv.style.top = mouse.y + 10 + 'px';
+                            tipsDiv.style.left = mouse.x + 10 + 'px';
+                            tipsDiv.innerHTML = target.getAttribute("tip");
+                            tipsDiv.style.display = "";	
+                            target.onmouseout = function(){
+                                tipsDiv.style.display = "none";	
+                            }
+                        } 
+                    }
+                </script>
+            </form>
+            <p>Don't have an account? <a href="" class="a2">Sign up!</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

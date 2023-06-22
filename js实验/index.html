@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+
+  transition: 1s;
+  /* 这里是实现侧边栏出来的速度 */
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* 在高度小于 450px 的较小屏幕上，更改 sidenav 的样式（更少的填充和更小的字体大小）*/
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">联系方式</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ 打开侧边栏</button>  
+  <!-- <h2>折叠的边栏</h2>
+  <p>单击菜单/栏图标以打开侧边栏，并将此内容推到右侧。</p> -->
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+//   这里的方法是用来获取侧边栏的id的，然后通过style来规定了这个id盒子在进行了openNav后的width大小变成了250px大小
+  document.getElementById("main").style.marginLeft = "250px";
+//   这里的方法意思在执行过openNav后是将main的id的那个盒子进行操作，使其将左边距加到250px
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
+<!-- 先点击打开栏后，执行openNav函数，然后id为mySidebar的div执行style.width = "250px"和将id为main的div执行了.style.marginLeft = "250px"-->
+<!-- 然后当你点击x后，就会执行将已经变化的模型转化回去的函数，closeNAv-->

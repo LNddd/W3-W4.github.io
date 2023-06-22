@@ -1,0 +1,68 @@
+.text {
+    font-size: 65px;
+    color: rgba(157, 207, 251, 0.936);
+    font-weight: 900;
+    position: absolute;
+    top: 185px;
+    left: 190px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+.text::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 8px;
+    background-color: rgb(235, 166, 251);
+    border-radius: 10px;
+    bottom: 14px;
+    left: -54px;
+    animation: trans 2s linear infinite;
+    opacity: 0;
+}
+
+
+@keyframes trans {
+    20% {
+        opacity: 1;
+    }
+
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        left: calc(100% + 18px);
+    }
+}
+
+
+.text span {
+    display: inline-block;
+    animation: wave 2s linear infinite;
+}
+.text span:nth-child(2){
+    animation-delay: 100ms;
+}
+.text span:nth-child(3){
+    animation-delay: 200ms;
+}
+.text span:nth-child(4){
+    animation-delay: 300ms;
+}
+@keyframes wave {
+    50% {
+        transform: translateY(-32px);
+
+    } 
+
+}
+
+
+
+.navigaton{
+    
+}

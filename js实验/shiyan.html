@@ -1,0 +1,516 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#idb").hover(function(){
+                
+                $("#ida").slideToggle(200);
+            });
+        });
+    </script>
+    <style>
+        .a {
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+            overflow: hidden;
+            display: none;
+            这里的话是使在没有进行JQ的时候，不会显示他的效果
+        }
+
+        .b:hover:hover {
+            a:width: 400px;
+        }
+        .b{
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="idb" class="b">
+        <div id="ida" class="a">
+            <p>前段时间，我在网上看到了一些厉害的网友，他们在分享一些由AI生成的非常优美的文章。我当时就被深深地吸引住了！你能想象吗？这些文章简直就是天才的杰作，充满了文艺的气息。我都忍不住想试试了！于是，我便上网搜索了一些拥有AI写作功能的软件来生成有深度的文章，并给我带来很多灵感。每次使用这些软件，我都能体验到一种写作的快乐。那么大家想不想知道AI写作机器人在线生成器有哪些呢？想知道的话就跟着我一起来看看吧。
+            </p>
+        </div>
+    </div>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body1-cube-loader {
+        position: relative;
+        /* u can choose any size */
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg);
+        animation: animate 4s linear infinite;
+        margin-left: 5%;
+        margin-top: 15%;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotateX(-30deg) rotateY(0);
+        }
+
+        100% {
+            transform: rotateX(-30deg) rotateY(360deg);
+        }
+    }
+
+    .body1-cube-loader .body1-cube-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* top: 0;
+  left: 0; */
+        transform-style: preserve-3d;
+    }
+
+    .body1-cube-loader .body1-cube-wrapper .cube-span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* top: 0;
+  left: 0; */
+        /* width 200px / 2 = 100px */
+        transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+        background: linear-gradient(to bottom,
+                hsl(330, 3.13%, 25.1%) 0%,
+                hsl(177.27, 21.71%, 32.06%) 5.5%,
+                hsl(176.67, 34.1%, 36.88%) 12.1%,
+                hsl(176.61, 42.28%, 40.7%) 19.6%,
+                hsl(176.63, 48.32%, 43.88%) 27.9%,
+                hsl(176.66, 53.07%, 46.58%) 36.6%,
+                hsl(176.7, 56.94%, 48.91%) 45.6%,
+                hsl(176.74, 62.39%, 50.91%) 54.6%,
+                hsl(176.77, 69.86%, 52.62%) 63.4%,
+                hsl(176.8, 76.78%, 54.08%) 71.7%,
+                hsl(176.83, 83.02%, 55.29%) 79.4%,
+                hsl(176.85, 88.44%, 56.28%) 86.2%,
+                hsl(176.86, 92.9%, 57.04%) 91.9%,
+                hsl(176.88, 96.24%, 57.59%) 96.3%,
+                hsl(176.88, 98.34%, 57.93%) 99%,
+                hsl(176.89, 99.07%, 58.04%) 100%);
+    }
+
+    .body1-cube-top {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: hsl(330, 3.13%, 25.1%) 0%;
+        /* width 200px / 2 = 100px */
+        transform: rotateX(90deg) translateZ(100px);
+        transform-style: preserve-3d;
+    }
+
+    .body1-cube-top::before {
+        content: '';
+        position: absolute;
+        /* u can choose any size */
+        width: 200px;
+        height: 200px;
+        background: hsl(176.61, 42.28%, 40.7%) 19.6%;
+        transform: translateZ(-250px);
+        filter: blur(10px);
+        box-shadow: 0 0 10px #323232,
+            0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+            0 0 30px #323232,
+            0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+    }
+</style>
+
+<body>
+    <div class="body1-cube-loader">
+        <div class="body1-cube-top"></div>
+        <div class="body1-cube-wrapper">
+            <span style="--i:0" class="cube-span"></span>
+            <span style="--i:1" class="cube-span"></span>
+            <span style="--i:2" class="cube-span"></span>
+            <span style="--i:3" class="cube-span"></span>
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .head-head-input-container {
+  position: relative;
+  margin-right: 1250px;
+}
+
+.head-input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.head-input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.head-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #0B2447;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.head-head-input-container .head-topline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.head-head-input-container input[type="head-head-text"]:focus ~ .head-topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.head-head-input-container .head-underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 6px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.head-head-input-container input[type="head-head-text"]:focus ~ .head-underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.head-head-input-container input[type="head-head-text"]:focus ~ .head-label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+</style>
+<body>
+<div class="head-head-input-container">
+<input class="head-input" name="head-head-text" type="head-head-text">
+<label class="head-label" for="head-input">Enter Your Name</label>
+<div class="head-topline"></div>
+<div class="head-underline"></div>
+</div>
+</body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: fixed;
+            这里将视频定位在背景上了，滑动时背景不变
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop src="./1.mp4"></video>
+    进行循环无声自动播放
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Input container */
+.head-input-container {
+  position: relative;
+  margin: 20px;
+  width: 40%
+}
+
+/* Input field */
+.head-input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.head-input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.head-input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.head-input-field:focus + .head-input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.head-input-field:focus + .head-input-label + .head-input-highlight {
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="head-input-container">
+        <input placeholder="Ener head-text" class="head-input-field" type="head-text">
+        <label for="head-input-field" class="head-input-label">Enter head-text</label>
+        <span class="head-input-highlight"></span>
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <h3 >
+            welcome 
+        </h3>
+        <h3 id="a">
+        </h3>
+    </div>
+    <script>
+        var name;
+        name=prompt("enter your name:")
+        document.getElementById("a").innerHTML=name
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(135, 46, 129);
+        }
+        .text2{
+            font-family: 'fangsong';
+            display: inline-block;
+          position: relative;
+          font-size: 40px;
+          height: 60px;
+          line-height: 60px;
+          color: rgb(245, 245, 245);
+        }
+        .text2::after{
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            height: 50px;
+            width: 3px;     
+            background-color: #fff;
+            animation: san 0.5s steps(1) infinite;
+        }
+        @keyframes san{
+            0%,100%{
+                background-color: #fff;
+            }
+            50%{
+               background-color: transparent;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span class="text2" ></span>
+    </h1>
+    <script>
+        const text = document.querySelector('.text2');
+        const txt  =["北极光之夜。","夜越黑，星星越亮。","答案在风中飘荡。"]; 
+        
+        var index=0;
+        var xiaBiao= 0;
+        var huan = true;
+     
+        setInterval(function(){
+           
+            if(huan){      
+                text.innerHTML = txt[xiaBiao].slice(0,++index);
+                console.log(index);
+            }
+            else{
+                text.innerHTML = txt[xiaBiao].slice(0,index--);
+                console.log(index);
+            }
+
+            if(index==txt[xiaBiao].length+3)
+            {
+                huan = false;
+            }
+            else if(index<0)
+            {
+                index = 0;
+                huan = true;
+                xiaBiao++;
+                if(xiaBiao>=txt.length)
+                {
+                    xiaBiao=0; 
+                }
+            }
+
+        },200)
+
+    </script>
+</body>
+</html> -->
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body >
+		<input type="button" value="button" id="button" tip="这是一个按钮"/>
+		<input type="button" value="button1" id="button1" tip="这是另一个按钮"/>
+	</body>
+	<script type="text/javascript">
+		document.body.onload = function(){
+			var objs = document.getElementsByTagName("*");
+			for(var i = 0 ;i < objs.length ; i ++){
+				var obj = objs[i];
+				if(obj.getAttribute("tip")){
+					obj.onmousemove = Tips.showTips;
+				}
+			}
+		}
+		var Tips = {
+			mousePos : function(e) {
+				var x, y;
+				var e = e || window.event;
+				return {
+					x : e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft,
+					y : e.clientY + document.body.scrollTop + document.documentElement.scrollTop
+				};
+			},			
+			showTips : function(event){
+				event = event || window.event;
+				var target = event.srcElement || event.target;
+				var tipsDiv = document.getElementById("tipsDiv");
+				if(typeof tipsDiv == undefined || tipsDiv == null){
+					tipsDiv = document.createElement("div");
+					tipsDiv.id = "tipsDiv";
+					document.body.appendChild(tipsDiv);
+				}
+				var mouse = Tips.mousePos(event);
+				tipsDiv.style.position = "absolute";
+				tipsDiv.style.width = "100px";
+				tipsDiv.style.height = "100px";
+				tipsDiv.style.backgroundColor = "gray";
+				tipsDiv.style.color = "black";
+				tipsDiv.style.top = mouse.y + 10 + 'px';
+				tipsDiv.style.left = mouse.x + 10 + 'px';
+				tipsDiv.innerHTML = target.getAttribute("tip");
+				tipsDiv.style.display = "";	
+				target.onmouseout = function(){
+					tipsDiv.style.display = "none";	
+				}
+			} 
+		}
+	</script>
+</html>
